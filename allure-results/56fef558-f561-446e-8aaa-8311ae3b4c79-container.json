@@ -1,0 +1,1 @@
+{"uuid": "321f7f17-e9a5-4d1a-81a9-10543de41b17", "befores": [{"name": "cleanup_function", "status": "passed", "start": 1748267915215, "stop": 1748267915215}], "afters": [{"name": "cleanup_function::0", "status": "passed", "start": 1748267915239, "stop": 1748267915349}], "start": 1748267915215, "stop": 1748267915349}
