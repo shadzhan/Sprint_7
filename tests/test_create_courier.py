@@ -8,7 +8,7 @@ from create_courier import CreateCourier
 
 
 class TestCreateCourier:
-    @pytest.fixture
+
     @allure.title("Успешное создание курьера")
     def test_create_courier_success(self, create_courier):
         response, login, password = create_courier
@@ -19,7 +19,7 @@ class TestCreateCourier:
     def test_create_duplicate(self):
         login, password, _ = register_new_courier()
         CreateCourier.create_courier(login, password, "AnyName")
-        response = CreateCourier.create_courier(login, password, "AnyName")
+        response = CreateCourier.create_duplicate_courier(login, password, "AnyName")
         assert response.status_code == 409
         assert "уже используется" in response.json()["message"]
 

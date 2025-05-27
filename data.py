@@ -3,7 +3,10 @@ class Url:
     CREATE_COURIER_URL = '/api/v1/courier'
     LOGIN_URL = '/api/v1/courier/login'
     ORDER_URL = '/api/v1/orders'
-    CANCEL_ORDER = "/api/v1/orders/cancel"
+    CANCEL_ORDER = '/api/v1/orders/cancel'
+    DELETE_COURIER = '/api/v1/courier/:id'
+
+
 
 class DataForCourierCreation:
     CREATE_COURIER_BODY = {
@@ -63,9 +66,18 @@ class DataForOrderList:
     }
 
 
-class Data:
-    INVALID_TEST_DATA = {
 
-              "login": "сталкер",
-              "password": "один"
+class Data:
+    INVALID_TEST_DATA = [
+        {"login": "", "password": "5987"},
+        {"login": "combo", "password": ""},
+        {"login": "12345", "password": "5789"},
+        {"password": "5789"}
+    ]
+
+
+class Login:
+    LOGIN_DATA = {
+        "login": "kongo",
+        "password": "3569"
     }
